@@ -3,6 +3,7 @@ O6-Methylguanine-DNA-methyltransferase (MGMT) promoter methylation was shown in 
 # Dependency
 Python 3
 # Workflow:
-## Input the training dataset (tcga_gbm_mgmt_status.csv)
+## Input the training dataset (training dataset.csv)
 ## Running the Random Forest-GA model (script.py)
+## The model can be tested using Test dataset.csv
 
