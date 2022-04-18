@@ -98,7 +98,7 @@ def mutation(chromosome, mutation_rate):
 			# flip the bit
 			chromosome[i] = not chromosome[i]
 
-def generations(size,n_feat,k, crossover_rate,mutation_rate, n_gen):
+def generations(size,n_feat,crossover_rate,mutation_rate, n_gen):
     best_chromo= []
     best_score= []
     population_nextgen=initilization_of_population(size,n_feat)
@@ -109,7 +109,6 @@ def generations(size,n_feat,k, crossover_rate,mutation_rate, n_gen):
       # print('score0',scores)
       score=scores[0]
       print('gen', i, score)
-
       k=size-2
       pop_after_sel = selection(pop_after_fit,weights,k) 
       # create the next generation
@@ -136,4 +135,4 @@ def generations(size,n_feat,k, crossover_rate,mutation_rate, n_gen):
     return best_chromo,best_score
 
 #Running Genetic Algorithm
-best_chromo,best_score=generations(size=50,k=48, n_feat=New_FS.shape[1],crossover_rate=0.8,mutation_rate=0.05,n_gen=5000)
+best_chromo,best_score=generations(size=50, n_feat=New_FS.shape[1],crossover_rate=0.8,mutation_rate=0.05,n_gen=5000)
