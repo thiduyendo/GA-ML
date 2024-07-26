@@ -3,10 +3,16 @@ O6-Methylguanine-DNA-methyltransferase (MGMT) promoter methylation was shown in 
 # Dependency
 Python 3
 # Workflow:
-## Input the training dataset (training dataset.csv)
-## Running the Random Forest-GA model (script.py)
-## The model can be tested using Test dataset.csv
-
+- Input the training dataset (training dataset.csv)
+- Running the Random Forest-GA model (script.py)
+- The model can be tested using Test dataset.csv
+```mermaid
+graph LR
+A[Genetic_Algorithm]  --> B(Training)			
+A --> C(Testing)
+B --> D{Selected_Fetures}
+C --> D
+```
 # Citation
 Please cite our paper as:
-Duyen Thi Do, Ming-Ren Yang, Luu Ho Thanh Lam, Nguyen Quoc Khanh Le, and Yu-Wei Wu; Improved prediction of the MGMT Methylation statuses of Glioblastoma using Genetic Algorithm-based Machine learning; Submitted.
+Duyen Thi Do, Ming-Ren Yang, Luu Ho Thanh Lam, Nguyen Quoc Khanh Le, and Yu-Wei Wu; [Improved prediction of the MGMT Methylation statuses of Glioblastoma using Genetic Algorithm-based Machine learning](https://www.nature.com/articles/s41598-022-17707-w).
